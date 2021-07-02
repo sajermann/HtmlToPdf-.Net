@@ -1,26 +1,23 @@
 ﻿using DinkToPdf.Models;
+using DinkToPdf_2._0.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using QRCoder;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using WkHtmlToPdfDotNet;
 using static QRCoder.PayloadGenerator;
 
-namespace DinkToPdf.Controllers
+namespace DinkToPdf_2._0.Controllers
 {
   public class HomeController : Controller
   {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-      _logger = logger;
-    }
-
     public IActionResult Index()
     {
       #region Gerando Código Barras
@@ -74,19 +71,12 @@ namespace DinkToPdf.Controllers
         Objects = {
           new ObjectSettings()
           {
-              Page = "https://localhost:44392/Home/",
-              //HeaderSettings = { 
-              //  FontSize = 9, 
-              //  Right = "Page [page] of [toPage]", 
-              //  Left = "<b>Bruno</b><div>Olá</div>", 
-              //  Line = true, 
-              //  Spacing = 2.812 
-              //}
+              //Page = "http://localhost:44392/Home/",
+              HtmlContent = @"<b>Lorem</b><div style='display:none'>bruno</div> ",
           },
         }
       };
 
-      converter.Convert(doc);
       var pdf = converter.Convert(doc);
 
       return File(pdf, "application/pdf");
