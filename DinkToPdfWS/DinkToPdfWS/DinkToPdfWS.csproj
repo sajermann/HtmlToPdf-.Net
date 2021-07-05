@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-DinkToPdfWS-A84598ED-D21D-4D3A-86A9-75DB15FFC342</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.16" />
+		<PackageReference Include="QRCoder" Version="1.4.1" />
+		<PackageReference Include="BarcodeLib" Version="2.4.0" />
+		<PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.8" />
+  </ItemGroup>
+</Project>

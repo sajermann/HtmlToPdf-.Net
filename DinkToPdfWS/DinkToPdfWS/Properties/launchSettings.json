@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "DinkToPdfWS": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
