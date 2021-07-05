@@ -24,6 +24,7 @@ namespace DinkToPdfWS
       var html = Html.Generate();
       Pdf.Generate();
       Console.WriteLine("Hello World!");
+      Console.ReadKey();
       while (!stoppingToken.IsCancellationRequested)
       {
         _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
