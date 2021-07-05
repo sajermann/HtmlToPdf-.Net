@@ -71,8 +71,8 @@ namespace DinkToPdf_2._0.Controllers
         Objects = {
           new ObjectSettings()
           {
-              //Page = "http://localhost:44392/Home/",
-              HtmlContent = @"<b>Lorem</b><div style='display:none'>bruno</div> ",
+              Page = "http://localhost:44392/Home/",
+              //HtmlContent = @"<b>Lorem</b><div style='display:none'>bruno</div> ",
           },
         }
       };
